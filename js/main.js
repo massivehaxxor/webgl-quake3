@@ -709,7 +709,7 @@ function main() {
     var vrBtn = document.getElementById("vrBtn");
     var mobileVrBtn = document.getElementById("mobileVrBtn");
     vrBtn.addEventListener("click", presentVR, false);
-    mobileVrBtn.addEventListener("click", presentVR, false);
+    //mobileVrBtn.addEventListener("click", presentVR, false);
 
 }
 window.addEventListener("load", main); // Fire this once the page is loaded up
