@@ -56,7 +56,7 @@ var mobileSite = false;
 
 var zAngle = 3;
 var xAngle = 0;
-var cameraPosition = [0, 0, 0];
+var cameraPosition = [0, 0, 50];
 var onResize = null;
 
 // VR Globals
