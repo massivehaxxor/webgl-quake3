@@ -44,7 +44,7 @@ var mapName = 'atcs';
 ];*/
 
 // For my demo, I compiled only the shaders the map used into a single file for performance reasons
-var mapShaders = ['scripts/web_demo.shader'];
+var mapShaders = ['scripts/' + mapName + '.shader'];
 
 // ===========================================
 // Everything below here is common to all maps
