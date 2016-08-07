@@ -431,10 +431,10 @@ function initEvents() {
             playerMover.jump();
         }
         pressed[event.keyCode] = true;
-        if ((event.keyCode == 'W'.charCodeAt(0) ||
-             event.keyCode == 'S'.charCodeAt(0) ||
-             event.keyCode == 'A'.charCodeAt(0) ||
-             event.keyCode == 'D'.charCodeAt(0) ||
+        if ((event.keyCode == 'k'.charCodeAt(0) ||
+             event.keyCode == 'j'.charCodeAt(0) ||
+             event.keyCode == 'h'.charCodeAt(0) ||
+             event.keyCode == 'l'.charCodeAt(0) ||
              event.keyCode == 32) && !event.ctrlKey) {
             event.preventDefault();
         }
