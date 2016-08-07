@@ -671,12 +671,12 @@ function main() {
       navigator.getVRDisplays().then(EnumerateVRDisplays);
     }
 
-    /*var playMusic = document.getElementById("playMusic");
+    var playMusic = document.getElementById("playMusic");
     playMusic.addEventListener("change", function() {
         if(map) {
             map.playMusic(playMusic.checked);
         }
-    });*/
+    });
 
     // Handle fullscreen transition
     var viewportFrame = document.getElementById("viewport-frame");
