@@ -94,7 +94,7 @@ q3bsp.parse = function(src, tesselationLevel) {
     }
     
     // Read map entities
-    //q3bsp.readEntities(header.lumps[0], src);
+    q3bsp.readEntities(header.lumps[0], src);
     
     // Load visual map components
     shaders = q3bsp.readShaders(header.lumps[1], src);
