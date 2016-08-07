@@ -56,14 +56,14 @@ var mobileSite = false;
 
 var zAngle = 3;
 var xAngle = 0;
-var cameraPosition = [0, 0, 50];
+var cameraPosition = [0, 0, 0];
 var onResize = null;
 
 // VR Globals
 var vrDisplay = null;
 
 // These values are in meters
-var playerHeight = 57; // Roughly where my eyes sit (1.78 meters off the ground)
+var playerHeight = 30; // Roughly where my eyes sit (1.78 meters off the ground)
 var vrIPDScale = 32.0; // There are 32 units per meter in Quake 3
 var vrPose = null;
 
@@ -367,17 +367,23 @@ function updateInput(frameTime) {
     var dir = [0, 0, 0];
 
     // This is our first person movement code. It's not really pretty, but it works
-    if(pressed['W'.charCodeAt(0)]) {
+    if(pressed['w'.charCodeAt(0)]) {
         dir[1] += 1;
     }
-    if(pressed['S'.charCodeAt(0)]) {
+    if(pressed['s'.charCodeAt(0)]) {
         dir[1] -= 1;
     }
-    if(pressed['A'.charCodeAt(0)]) {
+    if(pressed['a'.charCodeAt(0)]) {
         dir[0] -= 1;
     }
-    if(pressed['D'.charCodeAt(0)]) {
+    if(pressed['d'.charCodeAt(0)]) {
         dir[0] += 1;
+    }
+    if(pressed['k'.charCodeAt(0)]) {
+        dir[2] += 1;
+    }
+    if(pressed['j'.charCodeAt(0)]) {
+        dir[2] -= 1;
     }
 
     var gamepads = [];
@@ -431,10 +437,12 @@ function initEvents() {
             playerMover.jump();
         }
         pressed[event.keyCode] = true;
-        if ((event.keyCode == 'k'.charCodeAt(0) ||
+        if ((event.keyCode == 'w'.charCodeAt(0) ||
+             event.keyCode == 'a'.charCodeAt(0) ||
+             event.keyCode == 's'.charCodeAt(0) ||
+             event.keyCode == 'd'.charCodeAt(0) ||
              event.keyCode == 'j'.charCodeAt(0) ||
-             event.keyCode == 'h'.charCodeAt(0) ||
-             event.keyCode == 'l'.charCodeAt(0) ||
+             event.keyCode == 'k'.charCodeAt(0) ||
              event.keyCode == 32) && !event.ctrlKey) {
             event.preventDefault();
         }
