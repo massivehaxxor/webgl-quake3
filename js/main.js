@@ -28,7 +28,7 @@
 // The bits that need to change to load different maps are right here!
 // ===========================================
 
-var mapName = 'q3tourney2';
+var mapName = 'atcs';
 
 // If you're running from your own copy of Quake 3, you'll want to use these shaders
 /*var mapShaders = [
