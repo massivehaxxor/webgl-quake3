@@ -367,22 +367,22 @@ function updateInput(frameTime) {
     var dir = [0, 0, 0];
 
     // This is our first person movement code. It's not really pretty, but it works
-    if(pressed['w'.charCodeAt(0)]) {
+    if(pressed['W'.charCodeAt(0)]) {
         dir[1] += 1;
     }
-    if(pressed['s'.charCodeAt(0)]) {
+    if(pressed['S'.charCodeAt(0)]) {
         dir[1] -= 1;
     }
-    if(pressed['a'.charCodeAt(0)]) {
+    if(pressed['A'.charCodeAt(0)]) {
         dir[0] -= 1;
     }
-    if(pressed['d'.charCodeAt(0)]) {
+    if(pressed['D'.charCodeAt(0)]) {
         dir[0] += 1;
     }
-    if(pressed['k'.charCodeAt(0)]) {
+    if(pressed['K'.charCodeAt(0)]) {
         dir[2] += 1;
     }
-    if(pressed['j'.charCodeAt(0)]) {
+    if(pressed['J'.charCodeAt(0)]) {
         dir[2] -= 1;
     }
 
@@ -437,12 +437,12 @@ function initEvents() {
             playerMover.jump();
         }
         pressed[event.keyCode] = true;
-        if ((event.keyCode == 'w'.charCodeAt(0) ||
-             event.keyCode == 'a'.charCodeAt(0) ||
-             event.keyCode == 's'.charCodeAt(0) ||
-             event.keyCode == 'd'.charCodeAt(0) ||
-             event.keyCode == 'j'.charCodeAt(0) ||
-             event.keyCode == 'k'.charCodeAt(0) ||
+        if ((event.keyCode == 'W'.charCodeAt(0) ||
+             event.keyCode == 'A'.charCodeAt(0) ||
+             event.keyCode == 'S'.charCodeAt(0) ||
+             event.keyCode == 'D'.charCodeAt(0) ||
+             event.keyCode == 'J'.charCodeAt(0) ||
+             event.keyCode == 'K'.charCodeAt(0) ||
              event.keyCode == 32) && !event.ctrlKey) {
             event.preventDefault();
         }
