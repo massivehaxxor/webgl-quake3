@@ -1,6 +1,6 @@
 textures/atcs/skybox_s
 {
-	qer_editorimage textures/atcs/mars.jpg
+	qer_editorimage textures/atcs/mars.png
 	surfaceparm noimpact
 	surfaceparm nolightmap
 	surfaceparm sky
