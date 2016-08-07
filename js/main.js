@@ -148,11 +148,11 @@ var lastIndex = 0;
 function respawnPlayer(index) {
     if(map.entities && playerMover) {
         if(index == -1) {
-            index = (lastIndex+1)% map.entities.info_player_deathmatch.length;
+            index = (lastIndex+1)% map.entities.info_player_start.length;
         }
         lastIndex = index;
 
-        var spawnPoint = map.entities.info_player_deathmatch[index];
+        var spawnPoint = map.entities.info_player_start[index];
         playerMover.position = [
             spawnPoint.origin[0],
             spawnPoint.origin[1],
